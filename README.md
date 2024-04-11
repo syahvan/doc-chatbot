@@ -41,3 +41,5 @@ To use the Multi-Documents Chatbot App, follow these steps:
 3. The application will launch in your default web browser, displaying the user interface.
 4. Load multiple documents into the app by following the provided instructions.
 5. Ask questions in natural language about the loaded PDFs using the chat interface.
+
+![Example](./img/example.png)
