@@ -38,18 +38,8 @@ To use the Multi-Documents Chatbot App, follow these steps:
    ```
    streamlit run app.py
    ```
-<<<<<<< HEAD
 3. The application will launch in your default web browser, displaying the user interface.
 4. Load multiple documents into the app by following the provided instructions.
 5. Ask questions in natural language about the loaded PDFs using the chat interface.
 
 ![Example](./img/example.png)
-||||||| 6576887
-3. The application will launch in your default web browser, displaying the user interface.
-4. Load multiple documents into the app by following the provided instructions.
-5. Ask questions in natural language about the loaded PDFs using the chat interface.
-=======
-4. The application will launch in your default web browser, displaying the user interface.
-5. Load multiple documents into the app by following the provided instructions.
-6. Ask questions in natural language about the loaded documents using the chat interface.
->>>>>>> 8defc118e0fc563d9653e47a535bfdfda1345aed
