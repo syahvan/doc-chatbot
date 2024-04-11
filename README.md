@@ -6,7 +6,11 @@ The Multi-Documents Chatbot App is a Python application that allows you to engag
 
 ## How It Works
 
-![Multi-Documents Chat App Diagram](./img/process-diagram.png)
+<p align="center">
+  <img src="https://raw.githubusercontent.com/syahvan/doc-chatbot/main/img/process-diagram.png" width="80%" height="80%">
+  <br>
+  Picture 1. Multi-Documents Chatbot App Process Diagram
+</p>
 
 The application follows these steps to provide responses to your questions:
 1. **Document Loading**: The app reads multiple documents (.pdf, .docx, or .txt) and extracts their text content.
@@ -42,4 +46,8 @@ To use the Multi-Documents Chatbot App, follow these steps:
 4. Load multiple documents into the app by following the provided instructions.
 5. Ask questions in natural language about the loaded documents using the chat interface.
 
-![Example](./img/example.png)
+<p align="center">
+  <img src="https://raw.githubusercontent.com/syahvan/doc-chatbot/main/img/example.png" width="80%" height="80%">
+  <br>
+  Picture 2. Usage Example
+</p>
