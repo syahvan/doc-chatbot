@@ -1,12 +1,12 @@
-# Multi-Documents ChatBot App"
+# Multi-Documents ChatBot App
 
 ## Introduction
 
-The MultiDocument Chatbot App is a Python application that allows you to engage in conversations with multiple documents simultaneously. You can ask questions about the loaded documents using natural language, and the chatbot will provide relevant responses based on the content of the documents. This app utilizes a language model to generate accurate answers to your queries. Please note that the app will only respond to questions related to the loaded PDFs.
+The Multi-Documents Chatbot App is a Python application that allows you to engage in conversations with multiple documents simultaneously. You can ask questions about the loaded documents using natural language, and the chatbot will provide relevant responses based on the content of the documents. This app utilizes a language model to generate accurate answers to your queries. Please note that the app will only respond to questions related to the loaded PDFs.
 
 ## How It Works
 
-![MultiDocument Chat App Diagram](./img/process-diagram.png)
+![Multi-Documents Chat App Diagram](./img/process-diagram.png)
 
 The application follows these steps to provide responses to your questions:
 1. Document Loading: The app reads multiple documents and extracts their text content.
@@ -25,13 +25,13 @@ To install the MultiPDF Chat App, please follow these steps:
    pip install -r requirements.txt
    ```
 3. Obtain an API key from Groq and add it to the `.env` file in the project directory.
-```commandline
-GROQ_API_KEY=YOUR_API_TOKEN
-```
+   ```
+   GROQ_API_KEY=YOUR_API_TOKEN
+   ```
 
 ## Usage
------
-To use the MultiDocument Chatbot App, follow these steps:
+
+To use the Multi-Documents Chatbot App, follow these steps:
 
 1. Ensure that you have installed the required dependencies and added the Groq API key to the `.env` file.
 2. Run the `main.py` file using the Streamlit CLI. Execute the following command:
