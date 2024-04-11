@@ -7,7 +7,7 @@ The Multi-Documents Chatbot App is a Python application that allows you to engag
 ## How It Works
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/syahvan/doc-chatbot/main/img/process-diagram.png" width="80%" height="80%">
+  <img src="https://raw.githubusercontent.com/syahvan/doc-chatbot/main/img/process-diagram.png" width="85%" height="85%">
   <br>
   Picture 1. Multi-Documents Chatbot App Process Diagram
 </p>
@@ -47,7 +47,7 @@ To use the Multi-Documents Chatbot App, follow these steps:
 5. Ask questions in natural language about the loaded documents using the chat interface.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/syahvan/doc-chatbot/main/img/example.png" width="80%" height="80%">
+  <img src="https://raw.githubusercontent.com/syahvan/doc-chatbot/main/img/example.png" width="90%" height="90%">
   <br>
   Picture 2. Usage Example
 </p>
