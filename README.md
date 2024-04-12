@@ -25,10 +25,12 @@ To install the Multi-Documents Chatbot App, please follow these steps:
 
 1. Clone the repository to your local machine.
 2. Install the required dependencies by running the following command:
+
    ```
    pip install -r requirements.txt
    ```
 4. Obtain an API key from Groq and add it to the `.env` file in the project directory.
+
    ```
    GROQ_API_KEY=YOUR_API_TOKEN
    ```
@@ -39,6 +41,7 @@ To use the Multi-Documents Chatbot App, follow these steps:
 
 1. Ensure that you have installed the required dependencies and added the Groq API key to the `.env` file.
 2. Run the `main.py` file using the Streamlit CLI. Execute the following command:
+
    ```
    streamlit run app.py
    ```
