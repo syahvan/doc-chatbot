@@ -2,7 +2,7 @@
 
 ## Introduction
 
-The Multi-Documents Chatbot App is a Python application that allows you to engage in conversations with multiple documents simultaneously. You can ask questions about the loaded documents using natural language, and the chatbot will provide relevant responses based on the content of the documents. This app utilizes a language model to generate accurate answers to your queries. Please note that the app will only respond to questions related to the loaded documents.
+The Multi-Documents Chatbot App is a Python application that allows you to engage in conversations with multiple documents simultaneously. You can ask questions about the loaded documents using natural language, and the chatbot will provide relevant responses based on the content of the documents. This app utilizes a language model (Llama 3) to generate accurate answers to your queries. Please note that the app will only respond to questions related to the loaded documents.
 
 ## How It Works
 
