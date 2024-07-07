@@ -29,17 +29,7 @@ def initialize_session_state():
 
 
 def conversation_chat(query, chain, history):
-    template = """
-        Answer the question only based on the context below. 
-        If you can't answer the question based on the context below, reply "I don't know".
-
-        Context: {context}
-
-        Question: {question}
-    """
-    prompt = PromptTemplate.from_template(template)
-
-    result = chain.invoke({"question": query, "chat_history": history}, prompt=prompt)
+    result = chain.invoke({"question": query, "chat_history": history})
     history.append((query, result["answer"]))
     return result["answer"]
 
@@ -88,31 +78,31 @@ def main():
     # Initialize Streamlit
     st.sidebar.title("Document Processing")
     uploaded_files = st.sidebar.file_uploader("Upload your file here (.pdf, .docx, or .txt)", type=["pdf", "txt", "docx"], accept_multiple_files=True)
-    
-    # extract text from uploaded files
-    all_text = ""
-    for uploaded_file in uploaded_files:
-        if uploaded_file.type == "application/pdf":
-            pdf_reader = PdfReader(uploaded_file)
-            text = ""
-            for page in pdf_reader.pages:
-                text += page.extract_text()
-        elif uploaded_file.type == "text/plain":
-            text = uploaded_file.read().decode("utf-8")
-        elif uploaded_file.type == "application/vnd.openxmlformats-officedocument.wordprocessingml.document":
-            text = docx2txt.process(uploaded_file)
-        else:
-            st.write(f"Unsupported file type: {uploaded_file.name}")
-            continue
-        all_text += text
-
-    text_splitter = CharacterTextSplitter(separator="\n", chunk_size=1000, chunk_overlap=200, length_function=len)
-    text_chunks = text_splitter.split_text(all_text)
 
     # Create embeddings
     embeddings = OllamaEmbeddings(model="nomic-embed-text")
 
     if uploaded_files:
+        # extract text from uploaded files
+        all_text = ""
+        for uploaded_file in uploaded_files:
+            if uploaded_file.type == "application/pdf":
+                pdf_reader = PdfReader(uploaded_file)
+                text = ""
+                for page in pdf_reader.pages:
+                    text += page.extract_text()
+            elif uploaded_file.type == "text/plain":
+                text = uploaded_file.read().decode("utf-8")
+            elif uploaded_file.type == "application/vnd.openxmlformats-officedocument.wordprocessingml.document":
+                text = docx2txt.process(uploaded_file)
+            else:
+                st.write(f"Unsupported file type: {uploaded_file.name}")
+                continue
+            all_text += text
+
+        text_splitter = CharacterTextSplitter(separator="\n", chunk_size=1000, chunk_overlap=200, length_function=len)
+        text_chunks = text_splitter.split_text(all_text)
+        
         with st.spinner('Analyze Document...'):
             # Create vector store
             vector_store = FAISS.from_texts(text_chunks, embedding=embeddings)
