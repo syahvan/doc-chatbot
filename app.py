@@ -7,7 +7,6 @@ from langchain_core.prompts import PromptTemplate
 from langchain_community.vectorstores import FAISS
 from PyPDF2 import PdfReader
 import docx2txt
-from langchain_community.llms import Ollama
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_groq import ChatGroq
 from dotenv import load_dotenv
