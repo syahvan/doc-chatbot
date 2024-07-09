@@ -9,6 +9,6 @@ langchain-core
 langchain_community
 python-dotenv
 faiss-cpu
-sentence_transformers
+sentence-transformers
 huggingface-hub
 langchain-huggingface
