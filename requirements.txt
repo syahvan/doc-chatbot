@@ -5,8 +5,10 @@ streamlit_chat
 groq
 langchain
 langchain-groq
+langchain-core
 langchain_community
 python-dotenv
 faiss-cpu
-ollama
-
+sentence_transformers
+huggingface-hub
+langchain-huggingface
