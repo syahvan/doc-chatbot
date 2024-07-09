@@ -8,7 +8,7 @@ from langchain_community.vectorstores import FAISS
 from PyPDF2 import PdfReader
 import docx2txt
 from langchain_community.llms import Ollama
-from langchain_community.embeddings import OllamaEmbeddings
+from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_groq import ChatGroq
 from dotenv import load_dotenv
 import os
@@ -57,7 +57,7 @@ def create_conversational_chain(vector_store):
     # Create llm
     llm = ChatGroq(
             groq_api_key=groq_api_key, 
-            model_name='llama3-8b-8192'
+            model_name='llama3-70b-8192'
     )
 
     memory = ConversationBufferMemory(memory_key="chat_history", return_messages=True)
@@ -80,7 +80,8 @@ def main():
     uploaded_files = st.sidebar.file_uploader("Upload your file here (.pdf, .docx, or .txt)", type=["pdf", "txt", "docx"], accept_multiple_files=True)
 
     # Create embeddings
-    embeddings = OllamaEmbeddings(model="nomic-embed-text")
+    embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2", 
+                                           model_kwargs={'device': 'cpu'})
 
     if uploaded_files:
         # extract text from uploaded files
