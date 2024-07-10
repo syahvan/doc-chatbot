@@ -112,6 +112,8 @@ def main():
         chain = create_conversational_chain(vector_store)
                 
         display_chat_history(chain)
+    else:
+        st.warning('⚠️ Please upload your document in the sidebar first in order to access the chatbot!')
 
 if __name__ == "__main__":
     main()
