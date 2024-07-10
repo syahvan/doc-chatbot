@@ -74,7 +74,7 @@ def main():
     st.set_page_config(page_title="Ask your Document")
     st.header("Ask your Document 💬")
     linkedin = "https://www.linkedin.com/in/syahvanalviansyah/"
-    st.markdown("a Multi-Documents ChatBot App - Created by [Syahvan Alviansyah](%s) 👨🏻‍💻" % linkedin)
+    st.markdown("a Multi-Documents ChatBot App by [Syahvan Alviansyah](%s) 👨🏻‍💻" % linkedin)
     # Initialize Streamlit
     st.sidebar.title("Document Processing")
     uploaded_files = st.sidebar.file_uploader("Upload your file here (.pdf, .docx, or .txt)", type=["pdf", "txt", "docx"], accept_multiple_files=True)
