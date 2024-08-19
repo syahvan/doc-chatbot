@@ -9,12 +9,10 @@ from PyPDF2 import PdfReader
 import docx2txt
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_groq import ChatGroq
-from dotenv import load_dotenv
 import os
 import tempfile
 
-load_dotenv()  
-groq_api_key = os.environ['GROQ_API_KEY']
+groq_api_key = st.secrets['GROQ_API_KEY']
 
 def initialize_session_state():
     if 'history' not in st.session_state:
@@ -67,8 +65,6 @@ def create_conversational_chain(vector_store):
     return chain
 
 def main():
-    load_dotenv()  
-    groq_api_key = os.environ['GROQ_API_KEY']
     # Initialize session state
     initialize_session_state()
     st.set_page_config(page_title="Ask your Document")
